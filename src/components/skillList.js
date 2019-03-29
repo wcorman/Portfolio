@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
@@ -8,15 +7,10 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Chip from "@material-ui/core/Chip";
 
 export default class SkillList extends React.Component {
-  onSubmit = () => {
-    window.open(
-      `mailto:wcorman@gmail.com?subject=${
-      this.state.subject
-      }&body=${this.state.body}`
-    );
+  
+  handleClose = () => {
     this.props.toggleDialog();
   };
-
   render() {
     const skillAreas = {
       languages: {
@@ -85,7 +79,7 @@ export default class SkillList extends React.Component {
           </div>
         </DialogContent>
         <DialogActions>
-          <Button onClick={this.props.toggleDialog} color="primary">
+          <Button onClick={this.handleClose} color="primary">
             Close
           </Button>
         </DialogActions>

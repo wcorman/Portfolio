@@ -11,6 +11,9 @@ import LinkIcon from "@material-ui/icons/Link";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
+import SkillsIcon from "@material-ui/icons/Grade";
+import Fab from "@material-ui/core/Fab";
+
 
 class TimeStamp extends Component {
   state = { expanded: false };
@@ -19,10 +22,10 @@ class TimeStamp extends Component {
     this.setState(state => ({ expanded: !state.expanded }));
   };
 
-
   render() {
     let link;
     let showMore;
+    let skillList;
 
     this.props.link
       ? (link = (
@@ -37,6 +40,21 @@ class TimeStamp extends Component {
           </Tooltip>
         ))
       : (link = null);
+
+    this.props.skillList
+      ? (skillList = (
+          <div style={{marginTop: 15}}>
+            <Fab
+              style={{ background: "linear-gradient(to right bottom, #fc4420, #fc9520)" }}
+              color="primary"
+              aria-label="Add"
+              onClick={() => this.props.toggleDialog("skillList")}
+            >
+              <SkillsIcon />
+            </Fab>
+          </div>
+        ))
+      : (skillList = null);
 
     this.props.subtitle
       ? (showMore = (
@@ -70,7 +88,7 @@ return (
           <Typography component="p" align="left">
             {this.props.description} 
           </Typography>
-          {this.props.skillSet}
+      {skillList}
         </CardContent>
         <CardActions disableActionSpacing>
           {link}

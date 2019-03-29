@@ -24,7 +24,7 @@ export default class Dialog extends React.Component {
                       content = <ContactForm toggleDialog={this.props.toggleDialog}/>
                        break;
                      case "skillList":
-                      content = <SkillList />
+                       content = <SkillList toggleDialog={this.props.toggleDialog}/>
                        break;
                      default:
                       content = null;
@@ -39,6 +39,7 @@ export default class Dialog extends React.Component {
                          onClose={this.props.toggleDialog}
                          aria-labelledby="form-dialog-title"
                        >
+                       {this.props.children}
                          {renderContent()}
                        </Model>
                      </div>

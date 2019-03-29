@@ -15,6 +15,10 @@ export default class ContactForm extends React.Component {
   handleChange = name => event => {
     this.setState({ [name]: event.target.value });
   };
+  
+  handleClose =() => {
+    this.props.toggleDialog();
+  };
 
   onSubmit = () => {
     window.open(
@@ -61,7 +65,7 @@ export default class ContactForm extends React.Component {
           </DialogContent>
           <DialogActions>
             <Button
-              onClick={()=>this.props.toggleDialog}
+              onClick={this.handleClose}
               color="primary"
             >
               Cancel

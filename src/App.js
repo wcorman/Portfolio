@@ -22,7 +22,6 @@ class App extends Component {
 
   toggleModel = (content) => {
     this.setState({ modelStatus: !this.state.modelStatus, modelContent: content });
-    console.log("Heyy");
   };
 
   fadeOutWelcome = () => {
@@ -64,7 +63,7 @@ class App extends Component {
           content={this.state.modelContent}
         />
         <Welcome button={this.fadeOutWelcome} />
-        <Timeline />
+        <Timeline toggleDialog={this.toggleModel}/>
       </div>
     );
   }

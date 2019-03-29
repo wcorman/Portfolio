@@ -8,7 +8,7 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
+import SkillsIcon from "@material-ui/icons/Grade";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import CameraIcon from "@material-ui/icons/PhotoCamera";
@@ -98,12 +98,16 @@ class SideBar extends Component {
             </ListItemIcon>
             <ListItemText primary="Photography" />
           </ListItem>
+        </List>
+        <Divider />
+
+        <List>
           <ListItem
             button
             onClick={() => this.props.toggleDialog("skillList")}
           >
             <ListItemIcon>
-              <MailIcon />
+              <SkillsIcon />
             </ListItemIcon>
             <ListItemText primary="Skills" />
           </ListItem>
