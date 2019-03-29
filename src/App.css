@@ -1,33 +1,150 @@
-.App {
-  text-align: center;
+body {
+  height: 100vh;
+  color: #fff;
+  background:linear-gradient(-45deg, #ee7752, #7992ff, #61dafb, #23d5ab);
+  background-size: 375% 375%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  overflow-y: auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.Welcome {
   display: flex;
+  position: fixed;
+  z-index: 0;
+  text-align: center;
   flex-direction: column;
   align-items: center;
+  vertical-align: middle;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+.Timeline {
+  animation-delay: 1s;
+  visibility: hidden;
+  text-align: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  font-family: 'Montserrat',
+  sans-serif;
+}
+.TimeStamp {
+  width: 40%;
+  min-width: 300px;
+  position: static;
+  z-index: 3;
+  margin: 30px auto;
+}
+
+.Name {
+  animation-duration: 2s;
+  animation-delay: 0.7s;
+}
+
+.Description {
+  animation-duration: 2s;
+  animation-delay: 1.9s;
+}
+
+.TimelineButton {
+  animation-duration: 1.35s;
+  animation-delay: 2s;
+  margin-top: 0px;
+  visibility: visible;
+}
+
+.TimelineHeading {
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+
+#timeLineContainer {
+  position: fixed;
+  width:100vw;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.textHeading{
+  margin-top: 0.5em;
+  margin-bottom: 0.6em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  display:flex;
+  justify-content: center;
+}
+
+h1, h2, h3{
+  font-family: 'Roboto', sans-serif;
+}
+
+.timeContainer{
+  flex-direction: column;
+  overflow-y: auto;
+  height: 90vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#profilePic{
+  border: solid;
+  border-radius: 50%;
+  max-width: 425px;
+  min-width: 135px;
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.skillChip{
+  margin: 4px
+}
+
+.sideBar{
+  position: absolute;
+  z-index: 9;
 }
