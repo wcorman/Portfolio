@@ -9,7 +9,6 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import LinkIcon from "@material-ui/icons/Link";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import ContactForm from "./contactForm"
 import Tooltip from "@material-ui/core/Tooltip";
 import Zoom from "@material-ui/core/Zoom";
 
@@ -24,9 +23,6 @@ class TimeStamp extends Component {
   render() {
     let link;
     let showMore;
-    let contactForm;
-
-    this.props.contactForm ? contactForm = <ContactForm /> : contactForm = null;
 
     this.props.link
       ? (link = (
@@ -85,7 +81,6 @@ return (
             <Typography variant="h6" gutterBottom>
               {this.props.subtitle}
             </Typography>
-            {contactForm}
             <Typography paragraph align="left">
               {this.props.p1}
             </Typography>

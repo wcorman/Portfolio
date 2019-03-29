@@ -1,60 +1,79 @@
-import React, { Component } from "react";
-import Button from "@material-ui/core/Button";
-import TextField from "@material-ui/core/TextField";
-import Icon from "@material-ui/core/Icon";
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 
-class ContactForm extends Component {
+export default class ContactForm extends React.Component {
   state = {
-    subject: '',
-    body: '',
+    subject: "",
+    body: "",
   };
-
+  
   handleChange = name => event => {
     this.setState({ [name]: event.target.value });
   };
 
   onSubmit = () => {
-    window.open(`mailto:wcorman@gmail.com?subject=${this.state.subject}&body=${this.state.body}`);
-  }
+    window.open(
+      `mailto:wcorman@gmail.com?subject=${
+      this.state.subject
+      }&body=${this.state.body}`
+    );
+    this.props.toggleDialog();
+  };
 
   render() {
     return (
-      <div id="ContactForm">
-        <form noValidate autoComplete="off" style={{ width: "100%" }}>
-          <TextField
-            style={{ width: "80%" }}
-            id="standard-name"
-            label="Subject"
-            value={this.state.subject}
-            onChange={this.handleChange("subject")}
-            margin="normal"
-          />
-          <br />
-          <TextField
-            style={{ width: "80%" }}
-            id="standard-multiline-flexible"
-            label="Your message"
-            multiline
-            rows="3"
-            rowsMax="4"
-            value={this.state.body}
-            onChange={this.handleChange("body")}
-            margin="normal"
-          />
-          <br />
-          <Button
-            style={{ marginLeft: 15, backgroundColor: "#1F96F3" }}
-            variant="contained"
-            color="primary"
-            onClick = {this.onSubmit}
-          >
-            Send
-            <Icon style={{ marginLeft: 15, color: "white" }}>send</Icon>
-          </Button>
-        </form>
+      <div>
+          <DialogTitle id="form-dialog-title">
+            Contact
+                         </DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              Have a question or want to work
+              together?
+                           </DialogContentText>
+            <TextField
+              margin="dense"
+              id="subject"
+              label="Subject"
+              type="text"
+              onChange={this.handleChange(
+                "subject"
+              )}
+              fullWidth
+            />
+            <TextField
+              id="standard-multiline-flexible"
+              label="Your message"
+              multiline
+              rows="3"
+              rowsMax="4"
+              onChange={this.handleChange(
+                "body"
+              )}
+              type="text"
+              fullWidth
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button
+              onClick={()=>this.props.toggleDialog}
+              color="primary"
+            >
+              Cancel
+                           </Button>
+            <Button
+              onClick={this.onSubmit}
+              color="primary"
+            >
+              Send
+                           </Button>
+          </DialogActions>
       </div>
     );
   }
 }
-
-export default ContactForm;

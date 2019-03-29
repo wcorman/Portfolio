@@ -13,9 +13,9 @@ import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import CameraIcon from "@material-ui/icons/PhotoCamera";
 import LinkedInLogo from "../images/linkedIn.png";
+import GitHubLogo from "../images/githubLogo.png";
 import CvLogo from "../images/cvLogo.png";
 import Resume from "../images/resume.pdf";
-
 
 const styles = {
   list: {
@@ -43,6 +43,7 @@ class SideBar extends Component {
     this.setState({
       [side]: open,
     });
+
   };
   render() {
     const { classes } = this.props;
@@ -75,6 +76,16 @@ class SideBar extends Component {
             </ListItemIcon>
             <ListItemText primary="Resume" />
           </ListItem>
+          <ListItem
+            button
+            onClick={() => openLink("https://github.com/wcorman")}
+            style={{ paddingLeft: 15 }}
+          >
+            <ListItemIcon>
+              <img style={{ height: 30 }} src={GitHubLogo} alt="GitHub" />
+            </ListItemIcon>
+            <ListItemText primary="GitHub" />
+          </ListItem>
         </List>
         <Divider />
         <List>
@@ -87,11 +98,23 @@ class SideBar extends Component {
             </ListItemIcon>
             <ListItemText primary="Photography" />
           </ListItem>
-          <ListItem button>
+          <ListItem
+            button
+            onClick={() => this.props.toggleDialog("skillList")}
+          >
             <ListItemIcon>
               <MailIcon />
             </ListItemIcon>
-            <ListItemText primary="Test2" />
+            <ListItemText primary="Skills" />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() => this.props.toggleDialog("contactForm")}
+          >
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText primary="Contact" />
           </ListItem>
         </List>
       </div>

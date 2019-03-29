@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import "./App.css";
 import Welcome from "./components/welcome";
 import Timeline from "./components/timeLine";
-import LinkLogos from "./components/linkLogos";
 import SideBar from "./components/sideBar"
+import Model from "./components/model"
 
 class App extends Component {
   state = {
-    numPages: null,
-    pageNumber: 1
+    modelStatus: false,
+    modelContent: null,
   };
 
   componentDidMount() {
@@ -19,6 +19,11 @@ class App extends Component {
       timelineButton.classList.add("infinite");
     }, 2875);
   }
+
+  toggleModel = (content) => {
+    this.setState({ modelStatus: !this.state.modelStatus, modelContent: content });
+    console.log("Heyy");
+  };
 
   fadeOutWelcome = () => {
     let name = document.getElementById("Name");
@@ -43,7 +48,7 @@ class App extends Component {
     timeline.style.visibility = "visible";
     timeline.classList.add("animated");
     timeline.classList.add("fadeIn");
-    setTimeout(function () {
+    setTimeout(function() {
       let timelineButton = document.getElementById("TimelineButton");
       timelineButton.style.visibility = "hidden";
     }, 675);
@@ -52,7 +57,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SideBar/>
+        <SideBar toggleDialog={this.toggleModel} />
+        <Model
+          state={this.state.modelStatus}
+          toggleDialog={this.toggleModel}
+          content={this.state.modelContent}
+        />
         <Welcome button={this.fadeOutWelcome} />
         <Timeline />
       </div>

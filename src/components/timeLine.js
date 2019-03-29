@@ -12,7 +12,6 @@ import SchoolIcon from "@material-ui/icons/School";
 import PersonIcon from "@material-ui/icons/Person";
 import GroupIcon from "@material-ui/icons/Group";
 import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
-import SkillSet from "../components/skillSet";
 
 class Timeline extends Component {
   render() {
@@ -21,7 +20,6 @@ class Timeline extends Component {
     let personIcon = <PersonIcon />;
     let groupIcon = <GroupIcon />;
     let workOutlineIcon = <WorkOutlineIcon />;
-    let skillSet = <SkillSet />
     return (
       <div id="Timeline" className="Timeline timeContainer">
         <div id="timeLineContainer">
@@ -38,7 +36,6 @@ class Timeline extends Component {
               showMoreCaption="Contact"
               icon={workOutlineIcon}
               iconCaption="Open for work"
-              skillSet={skillSet}
               subtitle="Have a question or want to work together?"
             />
             <TimeStamp

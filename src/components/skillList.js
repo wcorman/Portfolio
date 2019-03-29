@@ -1,13 +1,28 @@
-import React, { Component } from "react";
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import Chip from "@material-ui/core/Chip";
 
-class SkillSet extends Component {
+export default class SkillList extends React.Component {
+  onSubmit = () => {
+    window.open(
+      `mailto:wcorman@gmail.com?subject=${
+      this.state.subject
+      }&body=${this.state.body}`
+    );
+    this.props.toggleDialog();
+  };
+
   render() {
     const skillAreas = {
       languages: {
         style: "linear-gradient(to right bottom, #2163fc, #20d7fc)",
         title: "Languages:",
-        skills: ["Javascript", "TypeScript","HTML", "CSS", "Python", "Ruby"]
+        skills: ["Javascript", "TypeScript", "HTML", "CSS", "Python", "Ruby"]
       },
       frontEnd: {
         style: "linear-gradient(to right bottom, #fc4420, #fc9520)",
@@ -46,7 +61,7 @@ class SkillSet extends Component {
         );
       }
       skills.unshift(
-        <div key={i} style={{ fontSize: 20, marginBottom:5}}>
+        <div key={i} style={{ fontSize: 20, marginBottom: 5 }}>
           {skillAreas.title}
         </div>
       );
@@ -54,16 +69,27 @@ class SkillSet extends Component {
     };
     return (
       <div>
-        {renderSkills(skillAreas.frontEnd)}
-        <hr />
-        {renderSkills(skillAreas.backEnd)}
-        <hr />
-        {renderSkills(skillAreas.languages)}
-        <hr />
-        {renderSkills(skillAreas.deployment)}
+        <DialogTitle id="form-dialog-title">Skill List</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            These are some of my development skills:
+          </DialogContentText>
+          <div>
+            {renderSkills(skillAreas.frontEnd)}
+            <hr />
+            {renderSkills(skillAreas.backEnd)}
+            <hr />
+            {renderSkills(skillAreas.languages)}
+            <hr />
+            {renderSkills(skillAreas.deployment)}
+          </div>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={this.props.toggleDialog} color="primary">
+            Close
+          </Button>
+        </DialogActions>
       </div>
     );
   }
 }
-
-export default SkillSet;
