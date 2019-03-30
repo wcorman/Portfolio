@@ -7,7 +7,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Chip from "@material-ui/core/Chip";
 
 export default class SkillList extends React.Component {
-  
+
   handleClose = () => {
     this.props.toggleDialog();
   };
@@ -49,7 +49,7 @@ export default class SkillList extends React.Component {
             style={{
               minWidth: 100,
               maxWidth: 130,
-              background: `${skillAreas.style}`
+              background: `${skillAreas.style}`,
             }}
           />
         );
@@ -63,12 +63,17 @@ export default class SkillList extends React.Component {
     };
     return (
       <div>
-        <DialogTitle id="form-dialog-title">Skill List</DialogTitle>
+        <DialogTitle id="form-dialog-title">Proficiencies</DialogTitle>
         <DialogContent>
           <DialogContentText>
             These are some of my development skills:
           </DialogContentText>
-          <div>
+          <div
+            style={{
+              color: "#000000",
+              marginTop: 25,
+            }}
+          >
             {renderSkills(skillAreas.frontEnd)}
             <hr />
             {renderSkills(skillAreas.backEnd)}

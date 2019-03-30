@@ -20,7 +20,7 @@ class Welcome extends Component {
         <h3
           id="Description"
           className="Description animated fadeIn"
-          style={{ marginTop: 0 }}
+          style={{ marginTop: 0, marginLeft: 10, marginRight: 10 }}
         >
           I'm a full stack developer with a passion for delivering clean, <br />{" "}
           beautiful user experiences.
