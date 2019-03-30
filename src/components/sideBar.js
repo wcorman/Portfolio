@@ -126,7 +126,7 @@ class SideBar extends Component {
 
     return (
       <div className="sideBar">
-        <Button style={{height: 95}} onClick={this.toggleDrawer("left", true)}><MenuIcon/></Button>
+        <Button id="menuButton" style={{height: 95}} onClick={this.toggleDrawer("left", true)}><MenuIcon/></Button>
         <Drawer
           open={this.state.left}
           onClose={this.toggleDrawer("left", false)}
