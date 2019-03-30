@@ -131,6 +131,11 @@ h1, h2, h3{
   height: 90vh;
   font-family: 'Montserrat', sans-serif;
 }
+@media (max-width:683px) {
+  .timeContainer {
+    height: 80vh;
+  }
+}
 
 #profilePic{
   border: solid;
