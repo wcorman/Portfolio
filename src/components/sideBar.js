@@ -44,7 +44,12 @@ class SideBar extends Component {
     const sideList = (
       <div className={classes.list}>
         <div style={{ textAlign: "center" }}>
-          <img id="sidebarProfile" src={ProfilePicture} style={{ height: "125px", marginTop: 10}} />
+          <img
+            id="sidebarProfile"
+            src={ProfilePicture}
+            alt="profile"
+            style={{ height: "125px", marginTop: 10 }}
+          />
           <Typography component="p" align="center" variant="subtitle1">
             Wes Corman
           </Typography>
@@ -77,7 +82,7 @@ class SideBar extends Component {
                 alt="LinkedIn"
               />
             </ListItemIcon>
-            <ListItemText primary="LinkedIn" style={{paddingLeft:10}}/>
+            <ListItemText primary="LinkedIn" style={{ paddingLeft: 10 }} />
           </ListItem>
           <ListItem
             button
@@ -87,7 +92,7 @@ class SideBar extends Component {
             <ListItemIcon>
               <img style={{ height: 35 }} src={CvLogo} alt="Resume" />
             </ListItemIcon>
-            <ListItemText primary="Resume" style={{ paddingLeft: 10 }}/>
+            <ListItemText primary="Resume" style={{ paddingLeft: 10 }} />
           </ListItem>
           <ListItem
             button
@@ -97,7 +102,7 @@ class SideBar extends Component {
             <ListItemIcon>
               <img style={{ height: 30 }} src={GitHubLogo} alt="GitHub" />
             </ListItemIcon>
-            <ListItemText primary="GitHub" style={{ paddingLeft: 10 }}/>
+            <ListItemText primary="GitHub" style={{ paddingLeft: 10 }} />
           </ListItem>
 
           <ListItem

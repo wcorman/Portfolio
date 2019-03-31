@@ -1,7 +1,7 @@
 body {
   height: 100vh;
   color: #fff;
-  background:linear-gradient(-45deg, #ee7752, #7992ff, #61dafb, #23d5ab);
+  background:linear-gradient(-45deg, #ee7752, #7992ff, #6091fa, #6f3dba);
   background-size: 375% 375%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
