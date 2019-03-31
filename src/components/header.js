@@ -25,23 +25,26 @@ const styles = {
 function Header(props) {
   const { classes } = props;
   return (
-    <div id="header" className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="Menu"
-            onClick={() => props.toggleDrawer()}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
-          </Typography>
-          <img style={{ height: "50px" }} src={Logo} />
-        </Toolbar>
-      </AppBar>
-    </div>
+    <div id="header" className="animated fadeInDown">
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Menu"
+              onClick={() => props.toggleDrawer()}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography
+              variant="h6"
+              color="inherit"
+              className={classes.grow}
+            />
+            <img style={{ height: "50px" }} src={Logo} />
+          </Toolbar>
+        </AppBar>
+      </div>
   );
 }
 
