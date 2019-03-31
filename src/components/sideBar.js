@@ -77,7 +77,7 @@ class SideBar extends Component {
                 alt="LinkedIn"
               />
             </ListItemIcon>
-            <ListItemText primary="LinkedIn" />
+            <ListItemText primary="LinkedIn" style={{paddingLeft:10}}/>
           </ListItem>
           <ListItem
             button
@@ -87,7 +87,7 @@ class SideBar extends Component {
             <ListItemIcon>
               <img style={{ height: 35 }} src={CvLogo} alt="Resume" />
             </ListItemIcon>
-            <ListItemText primary="Resume" />
+            <ListItemText primary="Resume" style={{ paddingLeft: 10 }}/>
           </ListItem>
           <ListItem
             button
@@ -97,11 +97,9 @@ class SideBar extends Component {
             <ListItemIcon>
               <img style={{ height: 30 }} src={GitHubLogo} alt="GitHub" />
             </ListItemIcon>
-            <ListItemText primary="GitHub" />
+            <ListItemText primary="GitHub" style={{ paddingLeft: 10 }}/>
           </ListItem>
-        </List>
-        <Divider />
-        <List>
+
           <ListItem
             button
             onClick={() => openLink(`https://500px.com/wcorman`)}
@@ -113,7 +111,6 @@ class SideBar extends Component {
           </ListItem>
         </List>
         <Divider />
-
         <List>
           <ListItem
             button
