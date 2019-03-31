@@ -44,7 +44,7 @@ class Timeline extends Component {
               link="https://www.skipthedishes.com/"
               linkCaption="View Project"
               showMoreCaption="More Info"
-              iconCaption="Job"
+              iconCaption="Work"
               description="Worked in a fast paced environment, 
           helping develop Canada's leading food delivery application. 
           Learned many of the best practices associated with a large scale project."
@@ -126,7 +126,7 @@ class Timeline extends Component {
               showMoreCaption="More Info"
               image={SrcLogo}
               icon={workIcon}
-              iconCaption="Job"
+              iconCaption="Work"
               description="Worked on industrial source emissions testing projects all across Saskatchewan in a team oriented environment."
               subtitle="Duties Included:"
               p1="● Industrial air emissions testing"

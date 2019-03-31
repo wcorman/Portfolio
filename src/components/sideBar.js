@@ -12,8 +12,10 @@ import MailIcon from "@material-ui/icons/Mail";
 import CameraIcon from "@material-ui/icons/PhotoCamera";
 import LinkedInLogo from "../images/linkedIn.png";
 import GitHubLogo from "../images/githubLogo.png";
+import ProfilePicture from "../images/portfolioProfile.png";
 import CvLogo from "../images/cvLogo.png";
 import Resume from "../images/resume.pdf";
+import Typography from "@material-ui/core/Typography";
 
 const styles = {
   list: {
@@ -41,7 +43,26 @@ class SideBar extends Component {
     const { classes } = this.props;
     const sideList = (
       <div className={classes.list}>
+        <div style={{ textAlign: "center" }}>
+          <img id="sidebarProfile" src={ProfilePicture} style={{ height: "125px", marginTop: 10}} />
+          <Typography component="p" align="center" variant="subtitle1">
+            Wes Corman
+          </Typography>
+          <Divider variant="middle" />
+          <Typography component="p" align="center" variant="subtitle2">
+            Full Stack Developer
+          </Typography>
+        </div>
         <List>
+          <ListItem
+            button
+            onClick={() => this.props.toggleDialog("skillList")}
+          >
+            <ListItemIcon>
+              <SkillsIcon />
+            </ListItemIcon>
+            <ListItemText primary="Skills" />
+          </ListItem>
           <ListItem
             button
             onClick={() =>
@@ -94,15 +115,6 @@ class SideBar extends Component {
         <Divider />
 
         <List>
-          <ListItem
-            button
-            onClick={() => this.props.toggleDialog("skillList")}
-          >
-            <ListItemIcon>
-              <SkillsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Skills" />
-          </ListItem>
           <ListItem
             button
             onClick={() => this.props.toggleDialog("contactForm")}

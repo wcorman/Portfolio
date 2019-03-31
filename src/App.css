@@ -158,3 +158,12 @@ h1, h2, h3{
   width: 100%;
   z-index: 10;
 }
+
+#sidebarProfile{
+  height: 125;
+  margin-top: 10;
+  border: solid;
+  border-width: thin;
+  border-radius: 50%;
+  border-color: rgba(0, 0, 0, 1);
+}
