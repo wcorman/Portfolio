@@ -23,10 +23,7 @@ class Timeline extends Component {
     return (
       <div id="Timeline" className="Timeline timeContainer">
         <div id="timeLineContainer">
-          <div className="TimelineHeading animated fadeInDown textHeading">
-            <div style={{ width: "80%" }}>A Brief History of (my) Time</div>
-          </div>
-          <div className="timeContainer" style={{ borderTop: "solid" }}>
+          <div className="timeContainer">
             <TimeStamp
               title="Looking for work"
               subheader="Currently looking for the next exciting project to contribute to."
@@ -35,7 +32,7 @@ class Timeline extends Component {
               showMoreCaption="Contact"
               icon={workOutlineIcon}
               iconCaption="Open for work"
-              description="I'm a detail orientated Full Stack Developer with a passion for developing maintainable, clean code.  You see a list of my skills here:"
+              description="I'm a detail orientated Full Stack Developer with a passion for developing maintainable, clean code. You can see a list of my skills here:"
               skillList={true}
               toggleDialog={this.props.toggleDialog}
             />

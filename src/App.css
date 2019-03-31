@@ -70,6 +70,7 @@ body {
   color: black;
   font-family: 'Montserrat',
   sans-serif;
+
 }
 .TimeStamp {
   width: 40%;
@@ -96,10 +97,6 @@ body {
   visibility: visible;
 }
 
-.TimelineHeading {
-  animation-duration: 1.5s;
-  animation-delay: 1s;
-}
 
 #timeLineContainer {
   position: fixed;
@@ -115,10 +112,6 @@ body {
   margin-top: 0.5em;
   margin-bottom: 0.6em;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  display:flex;
-  justify-content: center;
 }
 
 h1, h2, h3{
@@ -128,13 +121,9 @@ h1, h2, h3{
 .timeContainer{
   flex-direction: column;
   overflow-y: auto;
-  height: 90vh;
+  padding-bottom: 100px;
+  height: 100vh;
   font-family: 'Montserrat', sans-serif;
-}
-@media (max-width:683px) {
-  .timeContainer {
-    height: 80vh;
-  }
 }
 
 #profilePic{
@@ -155,4 +144,17 @@ h1, h2, h3{
 }
 #menuButton{
   position: fixed;
+}
+.TimeStamp:last-child {
+  margin-bottom: 40px;
+}
+.TimeStamp:first-child {
+  margin-top: 90px;
+}
+
+#header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }

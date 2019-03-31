@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import "./App.css";
 import Welcome from "./components/welcome";
 import Timeline from "./components/timeLine";
-import SideBar from "./components/sideBar"
-import Model from "./components/model"
+import SideBar from "./components/sideBar";
+import Model from "./components/model";
+import Header from "./components/header";
 
 class App extends Component {
   state = {
     modelStatus: false,
     modelContent: null,
+    drawerStatus: false,
   };
 
   componentDidMount() {
@@ -20,8 +22,17 @@ class App extends Component {
     }, 2875);
   }
 
-  toggleModel = (content) => {
-    this.setState({ modelStatus: !this.state.modelStatus, modelContent: content });
+  toggleModel = content => {
+    this.setState({
+      modelStatus: !this.state.modelStatus,
+      modelContent: content
+    });
+  };
+
+  toggleDrawer = () => {
+    this.setState({
+      drawerStatus: !this.state.drawerStatus
+    });
   };
 
   fadeOutWelcome = () => {
@@ -56,14 +67,19 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SideBar toggleDialog={this.toggleModel} />
+        <Header toggleDrawer={this.toggleDrawer} />
+        <SideBar
+          toggleDialog={this.toggleModel}
+          drawerStatus={this.state.drawerStatus}
+          toggleDrawer={this.toggleDrawer}
+        />
         <Model
           state={this.state.modelStatus}
           toggleDialog={this.toggleModel}
           content={this.state.modelContent}
         />
         <Welcome button={this.fadeOutWelcome} />
-        <Timeline toggleDialog={this.toggleModel}/>
+        <Timeline toggleDialog={this.toggleModel} />
       </div>
     );
   }
