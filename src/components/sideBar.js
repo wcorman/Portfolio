@@ -14,7 +14,6 @@ import LinkedInLogo from "../images/linkedIn.png";
 import GitHubLogo from "../images/githubLogo.png";
 import ProfilePicture from "../images/portfolioProfile.png";
 import CvLogo from "../images/cvLogo.png";
-import Resume from "../images/resume.pdf";
 import Typography from "@material-ui/core/Typography";
 
 const styles = {
@@ -33,10 +32,7 @@ const openLink=(link) => {
 class SideBar extends Component {
 
   state = {
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   };
 
   render() {
@@ -86,7 +82,11 @@ class SideBar extends Component {
           </ListItem>
           <ListItem
             button
-            onClick={() => openLink(Resume)}
+            onClick={() =>
+              openLink(
+                "https://drive.google.com/file/d/1hTv7qhDa-1Gqj_s1BYscU2AKHWTAYrtO/view?usp=sharing"
+              )
+            }
             style={{ paddingLeft: 11 }}
           >
             <ListItemIcon>

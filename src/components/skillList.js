@@ -30,7 +30,7 @@ export default class SkillList extends React.Component {
       },
       deployment: {
         style: "linear-gradient(to right bottom, #29b234, #28b785)",
-        title: "Deployment and Development Tools:",
+        title: "Deployment & Development Tools:",
         skills: ["Git", "GitHub/Bitbucket", "AWS", "Jira/Kanban", "Jenkins", "Grafana", "Papertrail"]
       }
     };
