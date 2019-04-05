@@ -39,13 +39,12 @@ class TimeStamp extends Component {
 			? (skillList = (
 					<div style={{ marginTop: 15 }}>
 						<Button
-							id="TimelineButton"
-							className="TimelineButton animated fadeIn"
 							variant="contained"
 							color="primary"
 							onClick={() => this.props.toggleDialog('skillList')}
+              style={{background: "linear-gradient(to right, #6091fa , #977aff)"}}
 						>
-							Development Skills
+							Dev Skills
 						</Button>
 					</div>
 				))

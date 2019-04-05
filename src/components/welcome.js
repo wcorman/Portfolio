@@ -30,6 +30,7 @@ class Welcome extends Component {
 					variant="contained"
 					color="primary"
 					onClick={this.props.button}
+          style={{background: "linear-gradient(to right, #6091fa , #977aff)"}}
 				>
 					See my timeline
 				</Button>
