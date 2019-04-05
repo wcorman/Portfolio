@@ -1,169 +1,168 @@
 body {
-  height: 100vh;
-  color: #fff;
-  background:linear-gradient(-45deg, #ee7752, #7992ff, #6091fa, #6f3dba);
-  background-size: 375% 375%;
-  -webkit-animation: Gradient 15s ease infinite;
-  -moz-animation: Gradient 15s ease infinite;
-  animation: Gradient 15s ease infinite;
-  overflow-y: auto;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #7992ff, #6091fa, #6f3dba);
+	background-size: 375% 375%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+	overflow-y: auto;
 }
 
 @-webkit-keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @-moz-keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .Welcome {
-  display: flex;
-  position: fixed;
-  z-index: 0;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  vertical-align: middle;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100vw;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-  font-family: 'Montserrat', sans-serif;
+	display: flex;
+	position: fixed;
+	z-index: 0;
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+	vertical-align: middle;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100vw;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: black;
+	font-family: 'Montserrat', sans-serif;
 }
 .Timeline {
-  animation-delay: 1s;
-  visibility: hidden;
-  text-align: center;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: black;
-  font-family: 'Montserrat',
-  sans-serif;
-
+	animation-delay: 1s;
+	visibility: hidden;
+	text-align: center;
+	align-items: center;
+	font-size: calc(10px + 2vmin);
+	color: black;
+	font-family: 'Montserrat', sans-serif;
 }
 .TimeStamp {
-  width: 40%;
-  min-width: 300px;
-  position: static;
-  z-index: 3;
-  margin: 30px auto;
+	width: 40%;
+	min-width: 300px;
+	position: static;
+	z-index: 3;
+	margin: 30px auto;
 }
 
 .Name {
-  animation-duration: 2s;
-  animation-delay: 0.7s;
+	animation-duration: 2s;
+	animation-delay: 0.7s;
 }
 
 .Description {
-  animation-duration: 2s;
-  animation-delay: 1.9s;
+	animation-duration: 2s;
+	animation-delay: 1.9s;
 }
 
 .TimelineButton {
-  animation-duration: 1.35s;
-  animation-delay: 2s;
-  margin-top: 0px;
-  visibility: visible;
+	animation-duration: 1.35s;
+	animation-delay: 2s;
+	margin-top: 0px;
+	visibility: visible;
 }
 
-
 #timeLineContainer {
-  position: fixed;
-  width:100vw;
-  font-family: 'Montserrat', sans-serif;
+	position: fixed;
+	width: 100vw;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
-.textHeading{
-  margin-top: 0.5em;
-  margin-bottom: 0.6em;
-  font-family: 'Montserrat', sans-serif;
+.textHeading {
+	margin-top: 0.5em;
+	margin-bottom: 0.6em;
+	font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3{
-  font-family: 'Roboto', sans-serif;
+h1,
+h2,
+h3 {
+	font-family: 'Roboto', sans-serif;
 }
 
-.timeContainer{
-  flex-direction: column;
-  overflow-y: auto;
-  padding-bottom: 100px;
-  height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+.timeContainer {
+	flex-direction: column;
+	overflow-y: auto;
+	padding-bottom: 100px;
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
 }
 
-#profilePic{
-  border: solid;
-  border-radius: 50%;
-  max-width: 425px;
-  min-width: 135px;
-  border-color: rgba(0, 0, 0, 0.6);
+#profilePic {
+	border: solid;
+	border-radius: 50%;
+	max-width: 425px;
+	min-width: 135px;
+	border-color: rgba(0, 0, 0, 0.6);
 }
 
-.skillChip{
-  margin: 4px;
+.skillChip {
+	margin: 4px;
 }
 
-.sideBar{
-  position: absolute;
-  z-index: 9;
+.sideBar {
+	position: absolute;
+	z-index: 9;
 }
-#menuButton{
-  position: fixed;
+#menuButton {
+	position: fixed;
 }
 .TimeStamp:last-child {
-  margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 .TimeStamp:first-child {
-  margin-top: 90px;
+	margin-top: 90px;
 }
 
-#header{
-  display: flex;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
+#header {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
 }
 
-#sidebarProfile{
-  height: 125;
-  margin-top: 10;
-  border: solid;
-  border-width: thin;
-  border-radius: 50%;
-  border-color: rgba(0, 0, 0, 1);
+#sidebarProfile {
+	height: 125;
+	margin-top: 10;
+	border: solid;
+	border-width: thin;
+	border-radius: 50%;
+	border-color: rgba(0, 0, 0, 1);
 }
