@@ -42,7 +42,7 @@ class TimeStamp extends Component {
 							variant="contained"
 							color="primary"
 							onClick={() => this.props.toggleDialog('skillList')}
-              style={{background: "linear-gradient(to right, #6091fa , #977aff)"}}
+							style={{ background: 'linear-gradient(to right, #6091fa , #977aff)' }}
 						>
 							Dev Skills
 						</Button>
