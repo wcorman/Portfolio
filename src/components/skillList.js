@@ -20,7 +20,7 @@ export default class SkillList extends React.Component {
 			frontEnd: {
 				style: 'linear-gradient(to right bottom, #fc4420, #fc9520)',
 				title: 'Front-End:',
-				skills: [ 'React.js', 'Redux', 'Illustrator', 'Photoshop', 'SASS' ]
+				skills: [ 'React.js', 'Redux', 'Illustrator', 'Photoshop', 'SASS', ]
 			},
 			backEnd: {
 				style: 'linear-gradient(to right bottom, #ba20fc, #fc20f1)',
@@ -31,7 +31,12 @@ export default class SkillList extends React.Component {
 				style: 'linear-gradient(to right bottom, #29b234, #28b785)',
 				title: 'Deployment & Development Tools:',
 				skills: [ 'Git', 'GitHub/Bitbucket', 'AWS', 'Jira/Kanban', 'Jenkins', 'Grafana', 'Papertrail' ]
-			}
+			},
+			testing: {
+				style: 'linear-gradient(to right bottom, #50e83c, #abeb3d)',
+				title: 'Testing:',
+				skills: [ 'Enzyme', 'Jest' ]
+			},
 		};
 
 		const renderSkills = (skillAreas) => {
@@ -78,6 +83,8 @@ export default class SkillList extends React.Component {
 						{renderSkills(skillAreas.languages)}
 						<hr />
 						{renderSkills(skillAreas.deployment)}
+						<hr />
+						{renderSkills(skillAreas.testing)}
 					</div>
 				</DialogContent>
 				<DialogActions>
