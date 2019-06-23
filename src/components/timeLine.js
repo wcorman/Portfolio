@@ -7,7 +7,6 @@ import CodeCoreLogo from '../images/codeCoreLogo.png';
 import SrcLogo from '../images/srcLogo.png';
 import StetLogo from '../images/stetLogo.png';
 import SaskPolyLogo from '../images/saskPolyLogo.png';
-import QMark from '../images/qmark.png';
 import WorkIcon from '@material-ui/icons/Work';
 import SchoolIcon from '@material-ui/icons/School';
 import PersonIcon from '@material-ui/icons/Person';
@@ -20,7 +19,6 @@ class Timeline extends Component {
 		let schoolIcon = <SchoolIcon />;
 		let personIcon = <PersonIcon />;
 		let groupIcon = <GroupIcon />;
-		let workOutlineIcon = <WorkOutlineIcon />;
 		return (
 			<div id="Timeline" className="Timeline timeContainer">
 				<div id="timeLineContainer">
