@@ -5,6 +5,7 @@ import SlackrLogo from '../images/slackrLogo.png';
 import DrillNinjaLogo from '../images/drillNinja.png';
 import CodeCoreLogo from '../images/codeCoreLogo.png';
 import SrcLogo from '../images/srcLogo.png';
+import StetLogo from '../images/stetLogo.png';
 import SaskPolyLogo from '../images/saskPolyLogo.png';
 import QMark from '../images/qmark.png';
 import WorkIcon from '@material-ui/icons/Work';
@@ -24,7 +25,7 @@ class Timeline extends Component {
 			<div id="Timeline" className="Timeline timeContainer">
 				<div id="timeLineContainer">
 					<div className="timeContainer">
-						<TimeStamp
+						{/* <TimeStamp
 							title="Looking for work"
 							subheader="Currently looking for the next exciting project to contribute to."
 							image={QMark}
@@ -35,6 +36,18 @@ class Timeline extends Component {
 							description="I'm a detail orientated Full Stack Developer with a passion for developing maintainable, clean code. You can see a list of my skills here:"
 							skillList={true}
 							toggleDialog={this.props.toggleDialog}
+						/>  */}
+						<TimeStamp
+							title="Stet Solutions (Web Developer)"
+							subheader="May 2019 - Present"
+							image={StetLogo}
+							icon={workIcon}
+							link="https://www.stetsolutions.com/"
+							linkCaption="View Company"
+							showMoreCaption="More Info"
+							iconCaption="Work"
+							description="Currently working with a versitile team of developers, providing our clients with the tech solutions they need to expand their businesses."
+
 						/>
 						<TimeStamp
 							title="Skip the Dishes (Apprentice Software Developer)"

@@ -20,7 +20,7 @@ export default class SkillList extends React.Component {
 			frontEnd: {
 				style: 'linear-gradient(to right bottom, #fc4420, #fc9520)',
 				title: 'Front-End:',
-				skills: [ 'React.js', 'Redux', 'Illustrator', 'Photoshop', 'SASS', ]
+				skills: [ 'Polymer', 'React.js', 'Redux', 'Illustrator', 'Photoshop', 'SASS', ]
 			},
 			backEnd: {
 				style: 'linear-gradient(to right bottom, #ba20fc, #fc20f1)',
