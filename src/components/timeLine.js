@@ -23,7 +23,7 @@ class Timeline extends Component {
 			<div id="Timeline" className="Timeline timeContainer">
 				<div id="timeLineContainer">
 					<div className="timeContainer">
-						{/* <TimeStamp
+						<TimeStamp
 							title="Looking for work"
 							subheader="Currently looking for the next exciting project to contribute to."
 							image={QMark}
@@ -34,7 +34,7 @@ class Timeline extends Component {
 							description="I'm a detail orientated Full Stack Developer with a passion for developing maintainable, clean code. You can see a list of my skills here:"
 							skillList={true}
 							toggleDialog={this.props.toggleDialog}
-						/>  */}
+						/> 
 						<TimeStamp
 							title="Stet Solutions (Web Developer)"
 							subheader="May 2019 - Present"
